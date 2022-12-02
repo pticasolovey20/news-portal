@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 import MainPage, { routeMain as routeMainPage } from 'pages/MainPage';
@@ -13,23 +13,25 @@ import './styles.scss';
 
 const AppContent = () => {
     return (
-        <div className="mainWrapper">
-            <Header />
-            <main>
-                <Switch>
-                    <Route exact path={routeMainPage()} component={MainPage} />
-                    <Route exact path={routeNewsListPage()} component={NewsListPage} />
-                    <Route exact path={routeNewsDetail()} component={NewsDetail} />
-                    <Route exact path={routeContacts()} component={Contacts} />
-                    <Redirect
-                        to={{
-                            pathname: routeMainPage(),
-                        }}
-                    />
-                </Switch>
-            </main>
-            <Footer />
-        </div>
+        <StrictMode>
+            <div className="mainWrapper">
+                <Header />
+                <main>
+                    <Switch>
+                        <Route exact path={routeMainPage()} component={MainPage} />
+                        <Route exact path={routeNewsListPage()} component={NewsListPage} />
+                        <Route exact path={routeNewsDetail()} component={NewsDetail} />
+                        <Route exact path={routeContacts()} component={Contacts} />
+                        <Redirect
+                            to={{
+                                pathname: routeMainPage(),
+                            }}
+                        />
+                    </Switch>
+                </main>
+                <Footer />
+            </div>
+        </StrictMode>
     );
 };
 
