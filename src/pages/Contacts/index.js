@@ -6,7 +6,7 @@ import Image from 'assets/img/image.jpg';
 
 const Contacts = () => {
     return (
-        <div className="contactsPage">
+        <section className="contactsPage">
             <div className="info">
                 <div className="phone">
                     <a href="tel:+380661234">+38 (066) 12 34</a>
@@ -23,7 +23,7 @@ const Contacts = () => {
             <div className="image">
                 <img src={Image} alt={Image} />
             </div>
-        </div>
+        </section>
     );
 };
 
