@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 
-import Header from '../Header';
-import MainPage, { routeMain as routeMainPage } from '../../pages/MainPage';
-import NewsListPage, { routeMain as routeNewsListPage } from '../../pages/NewsListPage';
-import NewsDetail from '../../pages/NewsDetail';
-import Contacts, { routeMain as routeContacts } from '../../pages/Contacts';
-import Footer from '../Footer';
+import { Header } from '../Header';
+import { MainPage, routeMain as routeMainPage } from '../../pages/MainPage';
+import { NewsListPage, routeMain as routeNewsListPage } from '../../pages/NewsListPage';
+import { NewsDetail } from '../../pages/NewsDetail';
+import { Contacts, routeMain as routeContacts } from '../../pages/Contacts';
+import { Footer } from '../Footer';
 
 import styles from './AppContent.module.scss';
 import axios from 'axios';

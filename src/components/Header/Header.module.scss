@@ -8,17 +8,27 @@
     .title {
         font-size: 25px;
         font-weight: 700;
+        margin-top: 6px;
     }
 
     nav {
         padding-top: 5px;
+
+        .link {
+            text-decoration: none;
+        }
+        
+        .activeLink {
+            color: blue;
+            text-decoration: none;
+        }
+        
         a {
             margin-left: 35px;
-            font-size: 18px;
+            font-size: 25px;
             font-weight: 400;
             
-            
-            &.linkActive {
+            &.active {
                 color: #004fec;
             }
 

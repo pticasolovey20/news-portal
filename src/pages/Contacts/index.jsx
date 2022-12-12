@@ -31,4 +31,4 @@ const Contacts = () => {
 
 export { routeMain };
 
-export default Contacts;
+export { Contacts };

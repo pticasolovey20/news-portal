@@ -1,3 +1,3 @@
 const routeMain = () => '/';
 
-export default routeMain;
+export { routeMain };

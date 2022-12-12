@@ -6,4 +6,4 @@ const prepareDate = value => {
     };
 };
 
-export default prepareDate;
+export { prepareDate };

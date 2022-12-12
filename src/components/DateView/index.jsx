@@ -1,6 +1,6 @@
 import React from 'react';
 
-import prepareDate from '../utils/prepareDate';
+import { prepareDate } from '../utils/prepareDate';
 
 import styles from './DateView.module.scss';
 
@@ -15,4 +15,4 @@ const DateView = ({ pubDate }) => {
     );
 };
 
-export default DateView;
+export { DateView };

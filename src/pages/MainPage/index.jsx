@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { PropsStorage } from '../../components/AppContent';
 
-import routeMain from './routes';
-import PageTitle from '../../components/PageTitle';
-import NewsList from '../../components/NewsList';
+import { routeMain } from './routes';
+import { PageTitle } from '../../components/PageTitle';
+import { NewsList } from '../../components/NewsList';
 
 import styles from './MainPage.module.scss';
 
@@ -26,4 +26,4 @@ const MainPage = () => {
 
 export { routeMain };
 
-export default MainPage;
+export { MainPage };

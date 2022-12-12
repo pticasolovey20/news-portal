@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import routeMain from './routes';
+import { routeMain } from './routes';
 import { useParams } from 'react-router-dom';
 
 import axios from 'axios';
@@ -33,4 +33,4 @@ const NewsDetail = () => {
 
 export { routeMain };
 
-export default NewsDetail;
+export { NewsDetail };

@@ -6,4 +6,4 @@ const PageTitle = ({ title }) => {
     return <div className={styles.pageTitle}>{title}</div>;
 };
 
-export default PageTitle;
+export { PageTitle };

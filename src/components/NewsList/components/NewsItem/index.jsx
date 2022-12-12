@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { routeMain as routeNewsDetail } from '../../../../pages/NewsDetail';
 
-import DateView from '../../../DateView';
+import { DateView } from '../../../DateView';
 
-import prepareText from '../../../utils/prepareText';
+import { prepareText } from '../../../utils/prepareText';
 
 import styles from './NewsItem.module.scss';
 
@@ -19,4 +19,4 @@ const NewsItem = ({ item }) => {
     );
 };
 
-export default NewsItem;
+export { NewsItem };
