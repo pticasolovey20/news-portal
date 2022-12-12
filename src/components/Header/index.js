@@ -1,27 +1,21 @@
 import React from 'react';
 
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import { routeMain as routeMainPage } from 'pages/MainPage';
-import { routeMain as routeNewsListPage } from 'pages/NewsListPage';
-import { routeMain as routeContacts } from 'pages/Contacts';
+import { routeMain as routeMainPage } from '../../pages/MainPage';
+import { routeMain as routeNewsListPage } from '../../pages/NewsListPage';
+import { routeMain as routeContacts } from '../../pages/Contacts';
 
-import './styles.scss';
+import styles from './Header.module.scss';
 
 const Header = () => {
     return (
-        <header className="mainHeader">
-            <div className="title">NEWS</div>
+        <header className={styles.mainHeader}>
+            <div className={styles.title}>NEWS</div>
             <nav>
-                <NavLink to={routeMainPage()} activeClassName={'linkActive'}>
-                    Home
-                </NavLink>
-                <NavLink to={routeNewsListPage()} activeClassName={'linkActive'}>
-                    News
-                </NavLink>
-                <NavLink to={routeContacts()} activeClassName={'linkActive'}>
-                    Contacts
-                </NavLink>
+                <Link to={routeMainPage()}>Home</Link>
+                <Link to={routeNewsListPage()}>News</Link>
+                <Link to={routeContacts()}>Contacts</Link>
             </nav>
         </header>
     );

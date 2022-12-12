@@ -1,28 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import './styles.scss';
+import React, { useContext } from 'react';
+import { PropsStorage } from '../../components/AppContent';
+
 import routeMain from './routes';
+import PageTitle from '../../components/PageTitle';
+import NewsList from '../../components/NewsList';
 
-import PageTitle from 'components/PageTitle';
-
-import NewsList from 'components/NewsList';
-
-import getNews from 'components/services/getNews';
+import styles from './MainPage.module.scss';
 
 const MainPage = () => {
-    const [newsList, setNewsList] = useState([]);
-
-    useEffect(() => {
-        getNews().then(response => {
-            setNewsList(response.data.articles);
-        });
-    }, []);
+    const { newsList } = useContext(PropsStorage);
 
     return (
-        <section className="mainPage">
+        <section className={styles.mainPage}>
             <PageTitle
                 title={
                     <h2>
-                        Always <br /> <span>up-to-date</span>
+                        Always <span>up-to-date</span>
                     </h2>
                 }
             />

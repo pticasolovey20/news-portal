@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './styles.scss';
+import styles from './PageTitle.module.scss';
 
-const PageTitle = props => {
-    return <div className="pageTitle">{props.title}</div>;
+const PageTitle = ({ title }) => {
+    return <div className={styles.pageTitle}>{title}</div>;
 };
 
 export default PageTitle;

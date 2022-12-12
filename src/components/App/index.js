@@ -1,12 +1,15 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import AppContent from 'components/AppContent';
+import AppContent from '../AppContent';
+import { StrictMode } from 'react';
 
 const App = () => {
     return (
-        <BrowserRouter>
-            <AppContent />
-        </BrowserRouter>
+        <StrictMode>
+            <BrowserRouter>
+                <AppContent />
+            </BrowserRouter>
+        </StrictMode>
     );
 };
 

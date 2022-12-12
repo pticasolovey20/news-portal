@@ -1,16 +1,21 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
+import { routeMain as routeNewsDetail } from '../../../../pages/NewsDetail';
 
-import './styles.scss';
+import DateView from '../../../DateView';
 
-const NewsItem = props => {
+import prepareText from '../../../utils/prepareText';
+
+import styles from './NewsItem.module.scss';
+
+const NewsItem = ({ item }) => {
     return (
-        <div className="newsItem">
-            <div className="title">{props.item.title}</div>
-            <div className="bottomWrapper">
-                <p className="author">{props.item.author}</p>
-                <p>{props.item.published_date}</p>
+        <Link key={item.id} to={routeNewsDetail(item.id)}>
+            <div className={styles.newsItem}>
+                <div className={styles.title}>{prepareText(item.title)}</div>
+                <img src={item.imgUrl} alt={item.imgUrl} />
+                <DateView pubDate={item.pubDate} />
             </div>
-        </div>
+        </Link>
     );
 };
 
