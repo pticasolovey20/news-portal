@@ -4,7 +4,7 @@ import styles from './Footer.module.scss';
 const Footer = () => {
     return (
         <footer className={styles.mainFooter}>
-            <div>
+            <div className={styles.description}>
                 <div>NEWS</div>
                 <div className={styles.small}>Single Page Application</div>
             </div>

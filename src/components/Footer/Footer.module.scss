@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 45px 0;
+    padding: 25px 25px;
 
     div {
         font-size: 35px;
@@ -22,3 +22,29 @@
         font-size: 18px
     }
 }
+
+@media screen and (max-width: 1140px) {
+    .mainFooter {
+        padding: 25px 50px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .mainFooter {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .mainFooter {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+
+        div {
+            padding: 5px 0;
+        }
+    }
+}
+
