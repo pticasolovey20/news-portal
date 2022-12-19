@@ -44,15 +44,4 @@
     }
 }
 
-@media screen and (max-width: 1140px) {
-    .contactsPage {
-        flex-direction: column;
 
-        .info {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    }
-}
