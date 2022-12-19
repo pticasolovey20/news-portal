@@ -14,32 +14,32 @@ import axios from 'axios';
 export const PropsStorage = React.createContext({});
 
 const AppContent = () => {
-    const [newsList, setNewsList] = useState([]);
+	const [newsList, setNewsList] = useState([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const response = await axios.get('https://63891094d94a7e5040ad939a.mockapi.io/news');
-            setNewsList(response.data);
-        };
-        fetchData();
-    }, []);
+	useEffect(() => {
+		const fetchData = async () => {
+			const response = await axios.get('https://63891094d94a7e5040ad939a.mockapi.io/news');
+			setNewsList(response.data);
+		};
+		fetchData();
+	}, []);
 
-    return (
-        <PropsStorage.Provider value={{ newsList }}>
-            <div className={styles.mainWrapper}>
-                <Header />
-                <main className={styles.main}>
-                    <Routes>
-                        <Route path={routeMainPage()} element={<MainPage />} />
-                        <Route path={routeNewsListPage()} element={<NewsListPage />} />
-                        <Route path="/:newsList/:id" element={<NewsDetail />} />
-                        <Route path={routeContacts()} element={<Contacts />} />
-                    </Routes>
-                </main>
-                <Footer className={styles.footer} />
-            </div>
-        </PropsStorage.Provider>
-    );
+	return (
+		<PropsStorage.Provider value={{ newsList }}>
+			<div className={styles.mainWrapper}>
+				<Header />
+				<main>
+					<Routes>
+						<Route path={routeMainPage()} element={<MainPage />} />
+						<Route path={routeNewsListPage()} element={<NewsListPage />} />
+						<Route path="/:newsList/:id" element={<NewsDetail />} />
+						<Route path={routeContacts()} element={<Contacts />} />
+					</Routes>
+				</main>
+				<Footer />
+			</div>
+		</PropsStorage.Provider>
+	);
 };
 
 export default AppContent;

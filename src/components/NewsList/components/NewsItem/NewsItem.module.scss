@@ -1,9 +1,10 @@
 .newsItem {
     display: grid;  
-    min-height: 320px;
-    grid-template-rows: auto 1fr auto;
+    min-height: 89%;
+    grid-template-rows: repeat(3, auto);
     padding: 25px 25px 15px 25px; 
     cursor: pointer;
+    align-items: center;
     border-radius: 10px;
     box-shadow: 3px 3px 15px rgb(192, 192, 192);
     transition: all 0.2s ease-in-out;
@@ -19,7 +20,7 @@
 }
 
 .title {
-    padding: 5px 5px 15px 5px;
+    padding: 10px 0;
     color: #333d51;
     font-size: 25px;
     font-weight: 400;
@@ -39,24 +40,7 @@
 
 img {
     width: 100%;
-    margin-top: auto;
+    margin-top: 20px;
 }
 
 
-@media (max-width: 1140px) {
-    .newsItem {
-        min-height: 280px;
-    }
-}
-
-@media (max-width: 960px) {
-    .newsItem {
-        min-height: 290px;
-    }
-}
-
-@media (max-width: 720px) {
-    .newsItem {
-        min-height: 270px;
-    }
-}

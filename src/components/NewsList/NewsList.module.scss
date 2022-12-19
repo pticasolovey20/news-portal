@@ -1,11 +1,11 @@
 .newsList{
-    margin: 0 auto;
-    max-width: 1140px;
-    padding: 30px;
     display: grid;
+    padding: 30px;
     grid-template-columns: repeat(auto-fit, minmax(340px, auto));
     grid-gap: 15px;
 }
+
+
 
 @media (max-width: 1140px) {
     .newsList {
