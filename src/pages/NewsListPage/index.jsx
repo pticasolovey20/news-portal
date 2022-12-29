@@ -1,12 +1,21 @@
-import React, { useContext } from 'react';
-import { PropsStorage } from '../../components/AppContent';
+import { useEffect } from 'react';
 
-import { routeMain } from './routes';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadNews } from '../../store/news/actions';
+import { selectList } from '../../store/news/selectors';
+
 import { PageTitle } from '../../components/PageTitle';
 import { NewsList } from '../../components/NewsList';
 
+import { routeMain } from './routes';
+
 const NewsListPage = () => {
-	const { newsList } = useContext(PropsStorage);
+	const dispatch = useDispatch();
+	const newsList = useSelector(selectList);
+
+	useEffect(() => {
+		dispatch(loadNews());
+	}, [dispatch]);
 
 	return (
 		<section>
@@ -22,6 +31,5 @@ const NewsListPage = () => {
 	);
 };
 
-export { routeMain };
-
 export { NewsListPage };
+export { routeMain };

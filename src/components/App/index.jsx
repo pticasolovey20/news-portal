@@ -1,16 +1,22 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import AppContent from '../AppContent';
 import { StrictMode } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
+import { Provider } from 'react-redux';
+import { store } from '../../store';
+
+import AppContent from '../AppContent';
 
 const App = () => {
-    return (
-        <StrictMode>
-            <BrowserRouter>
-                <AppContent />
-            </BrowserRouter>
-        </StrictMode>
-    );
+	return (
+		<StrictMode>
+			<BrowserRouter>
+				<Provider store={store}>
+					<AppContent />
+				</Provider>
+			</BrowserRouter>
+		</StrictMode>
+	);
 };
 
 export default App;

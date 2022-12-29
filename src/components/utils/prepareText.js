@@ -1,5 +1,5 @@
 const prepareText = value => {
-    return value.toUpperCase();
+	return value.toUpperCase();
 };
 
 export { prepareText };
